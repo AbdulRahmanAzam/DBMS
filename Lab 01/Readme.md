@@ -1,4 +1,4 @@
-
+```sql
 -- ==========================
 -- In-Lab Tasks
 -- ==========================
@@ -124,4 +124,4 @@ FROM employees
 WHERE salary > (SELECT MAX(salary)
                 FROM employees
                 WHERE department_id = 90);
-
+```
