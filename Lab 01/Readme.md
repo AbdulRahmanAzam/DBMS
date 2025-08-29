@@ -1,3 +1,5 @@
+<img width="1097" height="733" alt="image" src="https://github.com/user-attachments/assets/ee283e95-a9c9-4f02-afb8-5c4d97c54abd" />
+
 ```sql
 
 -- In-Lab Tasks
