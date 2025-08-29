@@ -1,3 +1,5 @@
+[DB Task-Lab - 02.docx](https://github.com/user-attachments/files/22043664/DB.Task-Lab.-.02.docx)
+
 ```sql
 
 -- IN lab tasks
