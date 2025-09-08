@@ -1,7 +1,7 @@
-# [DB Lab - 01.docx](https://github.com/user-attachments/files/22202202/DB.Lab.-.01.docx)
+## Lab Files  
 
-
-# [DB Task-Lab - 01.docx](https://github.com/user-attachments/files/22202203/DB.Task-Lab.-.01.docx)
+- 📄 [DB Lab - 01 (DOCX)](https://github.com/user-attachments/files/22202202/DB.Lab.-.01.docx)  
+- 📄 [DB Task - Lab 01 (DOCX)](https://github.com/user-attachments/files/22202203/DB.Task-Lab.-.01.docx)  
 
 
 <img width="1097" height="733" alt="image" src="https://github.com/user-attachments/assets/ee283e95-a9c9-4f02-afb8-5c4d97c54abd" />
