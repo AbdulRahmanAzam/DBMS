@@ -1,4 +1,8 @@
-[DB Task-Lab - 02.docx](https://github.com/user-attachments/files/22043664/DB.Task-Lab.-.02.docx)
+# Lab Files
+
+- 📄 [DB Lab - 02](https://github.com/user-attachments/files/22202241/DB.Lab.-.02.2.docx)
+
+- 📄 [DB Task-Lab - 02](https://github.com/user-attachments/files/22043664/DB.Task-Lab.-.02.docx)
 
 ```sql
 
