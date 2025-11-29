@@ -209,3 +209,73 @@ begin
 end;
 /
 ```
+
+
+## Q10
+```sql
+set serverouput on;
+declare
+    vlower number := &lowernumber;
+    vupper number := &uppernumber;
+    betweensum number := 0;
+begin   
+    for i in vlower .. vupper loop
+        betweensum := betweensum + i;
+    end loop;
+
+    dbms_output.put_line('the sum of number from ' || vlower || ' to ' || vupper || ' is ' || betweensum);
+
+end;
+/
+```
+
+## Q11
+```sql
+set serveroutput on;
+declare
+    vempno number := &empno;
+    vname varchar2(50);
+    vhiredate date;
+    vdeptname varchar2(50);
+
+begin
+    select e.empno, e.ename, e.hiredate, d.dname
+    into vempno, vname, vhiredate, vdeptname
+    from scott.emp e
+    join scott.dept d on e.deptno = d.DEPTNO
+    where e.empno = vempno;
+
+    dbms_output.put_line('empno: ' || vempno);
+    dbms_output.put_line('deptname: ' || vdeptname);
+    dbms_output.put_line('hiredate: ' || vhiredate);
+    dbms_output.put_line('name: ' || vname);
+end;
+/
+```
+
+## Q12
+```sql
+set serveroutput on;
+DECLARE
+    vnum number := &num;
+    voriginal number;
+    vreversed number := 0;
+    vdigit number;
+
+BEGIN
+    voriginal := vnum;
+
+    while vnum > 0 LOOP
+        vdigit := mod(vnum, 10); -- get last digit
+        vreversed := vreversed * 10 + vdigit; -- build reverse number
+        vnum := trunc(vnum / 10);  -- remove last digit
+    end loop;
+
+    if voriginal = vreversed then
+        dbms_output.put_line(voriginal || ' is a palindormo');
+    else
+        dbms_output.put_line(voriginal || ' is NOT a palindormo');
+    end if;
+end;
+/
+```
