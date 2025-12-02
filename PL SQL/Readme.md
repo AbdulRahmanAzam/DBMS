@@ -196,7 +196,7 @@ end;
 ```
 
 
-## Q8
+## Q random dont know
 ```sql
 
 set serveroutput on;
@@ -222,6 +222,40 @@ BEGIN
   update_salary(10);
 end;
 / 
+
+```
+
+## Q8 
+```sql
+
+-- view of each designation and number of employees with that designation
+create or replace view v_designation_count as
+select job, count(*) as num_employees
+from emp
+group by job;
+
+select * from v_designation_count;
+
+
+
+-- view employee details (empno, ename, deptno, deptname) excludign king
+create or replace view v_emp_detailsExcludingKing as
+select e.empno, e.ename, e.deptno, d.deptname as deptname
+from emp e
+join dept d on e.deptno = d.deptno
+where e.ename <> 'KING';
+
+
+select * from v_emp_detailsExcludingKing;
+
+-- view employee details for all employees
+create or replace view v_emp_details as
+select e.empno, e.ename, e.deptno, d.deptname as deptname
+from emp e
+join dept d on e.deptno = d.deptno;
+
+select * from v_emp_details;
+
 
 ```
 
