@@ -196,6 +196,36 @@ end;
 ```
 
 
+## Q8
+```sql
+
+set serveroutput on;
+-- procedure will not called until called explicitly
+create or replace procedure update_salary (
+  pDeptno in number
+)
+as
+BEGIN 
+  update emp
+  set sal = sal + 1000
+  where sal > 5000
+    and deptno = pDeptno;
+    
+  for rec in (select empno, deptno, sal from emp where sal > 4000) loop
+    dbms_output.put_line('column 1: ' || rec.empno || ' salary ' ||  rec.sal);
+  end loop;
+    
+end;
+/
+-- call procedure
+BEGIN
+  update_salary(10);
+end;
+/ 
+
+```
+
+
 ## Q9
 ```sql
 set serverouput on;
