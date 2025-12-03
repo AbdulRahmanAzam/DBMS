@@ -231,4 +231,54 @@ DROP TABLE critical_table;                           -- should error
 ## Q3: Create a DDL trigger that prevents the creation of new tables with a specific naming pattern.
 ```sql
 
+create or replace trigger preventTestTables
+before create on schema
+declare
+begin
+  if ora_dict_obj_type = 'TABLE' then
+    if ora_dict_obj_name like 'TEST_%' then
+      raise_application_error(-20001, 'Chal bhai maaf kar');
+    end if;
+  end if;
+end;
+/
+
+create table test_emp (id number);
+show errors trigger preventTestTables;
 ```
+
+
+# SYSTEM / DATABASE Trigger Task:
+
+## Q1: Create a system trigger that captures information when a user logs in.
+```sql
+
+```
+
+## Q2: Create a system trigger that sends an email notification to the DBA whenever a user with specific privileges logs in.
+```sql
+
+```
+
+## Q3: Create a system trigger that automatically sets the session time zone for all users upon login.
+```sql
+
+```
+
+
+# Instead of Trigger Task:
+## Q1: Create an &quot;Instead of&quot; trigger for a view that allows inserting data into multiple tables when an insert operation is performed on the view
+```sql
+
+```
+
+## Q2: Create an &quot;Instead of&quot; trigger for a view that allows users to update records in a way that calculates and updates a computed column.
+```sql
+
+```
+
+## Q3: Create an &quot;Instead of&quot; trigger for a view that allows users to insert records into multiple related tables through a single view.
+```sql
+
+```
+
